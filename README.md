@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# ⚛️ 𝓐𝓽𝓲𝓿𝓲𝓭𝓪𝓭𝓮 𝓡𝓮𝓪𝓬𝓽 + 𝓒𝓢𝓢 🎨
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW45YnRjOG4xazN1ZG5sZnd5MzUxdXV5c3hwc3pxMHVtaWc4eTJhbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tXPAH9cNL91Nm/giphy.gif" width="900" height="400" />
 
-## Available Scripts
+## 💬 **Descrição da Atividade**
+<details>
+  <summary>
+  ●-━━━━━━━━━━━━━━━━━-●
+  </summary>
+  ❝ Projeto construído com foco em componentização, estilização responsiva e uso de React com CSS para criar uma interface moderna e funcional. ❞
+  <br>
+</details>
 
-In the project directory, you can run:
 
-### `npm start`
+## 🛠️ **Tecnologias Utilizadas** 🔧
+- **Linguagem**: JavaScript
+- **Biblioteca**: React.js  
+- **Estilização**: CSS puro   
+- **Editor**: Visual Studio Code
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# ✅ **Funcionalidades Concluídas**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🛂 **Tela de Login**
+- Campo de input para email e senha  
+- Botão separado como componente reutilizável  
+- Estilo customizado e responsivo  
+- Layout dividido com banner ilustrativo  
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# ⏳ **Funcionalidades Pendentes**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🎭 **Cadastro de Gênero**
+- Formulário com campo para nome do gênero  
+- Botão de envio  
+- Estilização limpa e objetiva  
+- Estrutura de componente reutilizável  
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🎬 **Cadastro de Filme**
+- Campos para nome, descrição e seleção de gênero  
+- Integração entre componentes  
+- Layout organizado e responsivo  
+- Validação básica dos campos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Feito com 💙 e muita dedicação usando **React**.
