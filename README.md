@@ -23,12 +23,4 @@ Projeto desenvolvido com **React** e estilizado com **CSS**, abordando component
 
 ---
 
-## 🚧 Em Desenvolvimento
-### 🛍️ Carrinho de Compras
-- Adicionar e remover camisetas
-- Atualização dinâmica do valor total com useState
-- Componentização planejada: Produto, Carrinho e Total
-
----
-
 > Feito com ♥ usando React.
