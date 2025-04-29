@@ -11,14 +11,14 @@
   <br>
 </details>
 
-
 ## 🛠️ **Tecnologias Utilizadas** 🔧
-- **Linguagem**: JavaScript
+- **Linguagem**: JavaScript  
 - **Biblioteca**: React.js  
-- **Estilização**: CSS puro   
-- **Editor**: Visual Studio Code
+- **Estilização**: CSS puro  
+- **Editor**: Visual Studio Code  
+- **Gerenciamento de Rotas**: React Router DOM  
 
-
+---
 
 # ✅ **Funcionalidades Concluídas**
 
@@ -28,23 +28,33 @@
 - Estilo customizado e responsivo  
 - Layout dividido com banner ilustrativo  
 
-
-# ⏳ **Funcionalidades Pendentes**
-
+### 🌐 **Sistema de Rotas**
+- Implementação com `react-router-dom`  
+- Navegação entre páginas de forma fluida  
+- Componentes organizados por rotas específicas (ex: `/login`, `/genero`, `/filme`)  
+- Página padrão de erro para rotas inexistentes  
 
 ### 🎭 **Cadastro de Gênero**
-- Formulário com campo para nome do gênero  
-- Botão de envio  
-- Estilização limpa e objetiva  
-- Estrutura de componente reutilizável  
+- Componente de página criado exclusivamente para o cadastro de gênero  
+- Formulário funcional com campo de nome e botão de envio  
+- Estilização simples e responsiva  
+- Conectado ao sistema de rotas
 
-
-
-### 🎬 **Cadastro de Filme**
+  ### 🎬 **Cadastro de Filme**
 - Campos para nome, descrição e seleção de gênero  
 - Integração entre componentes  
 - Layout organizado e responsivo  
-- Validação básica dos campos
+- Validação básica dos campos  
+
+---
+
+# ⏳ **Funcionalidades Pendentes**
+
+### 🎭 **Cadastro de Gênero**
+- [⏳] Feedback visual após envio
+
+### 🎬 **Cadastro de Filme**
+- [⏳] Feedback visual após envio
 
 ---
 
