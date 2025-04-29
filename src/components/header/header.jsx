@@ -1,15 +1,21 @@
 import "./Header.css"
 import Logo from "../../assets/img/logo.svg"
+import { Link } from "react-router-dom"
+
 
 const Header = () => {
-    return(
+    return (
         <header>
             <div className="layout_grid cabecalho">
-                <img src={Logo} alt="Logo do Filmoteca" />
+                {/* Ao clicar no link, rediriciona para a tela de login*/}
+                <Link to="/">
+                    <img src={Logo} alt="Logo do Filmoteca" />
+                </Link>
+
 
                 <nav className="nav_header">
-                    <a href="" className="link_header">Filme</a>
-                    <a href="" className="link_header">Gênero</a>
+                    <Link className="link_header" to="/filme">Filme</Link>
+                    <Link className="link_header" to="/genero">Gênero</Link>
                 </nav>
             </div>
         </header>
