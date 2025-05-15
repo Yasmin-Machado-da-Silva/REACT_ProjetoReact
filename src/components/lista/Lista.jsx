@@ -15,20 +15,39 @@ const Lista = (props) => {
                         {/* tr = table row*/}
                         <tr className="table_cabecalho">
                             <th>Nome</th>
-                            <th style={{display:props.visiGenero}}>Gênero</th>
+                            <th style={{ display: props.visiGenero }}>Gênero</th>
                             <th>Editar</th>
                             <th>Excluir</th>
                         </tr>
                     </thead>
                     {/*tbody => corpo da tabela*/}
                     <tbody>
-                        <tr className="item_lista">
-                            <td data-cell="Nome">Harry Potter e a Pedra Filosofal</td>
-                            <td data-cell="Genero" style={{display:props.visiGenero}}>Ação</td>
-                            <td data-cell="Editar"><img src={Editar} alt="Caneta" /></td>
-                            <td data-cell="Excluir"><img src={Excluir} alt="Lixo" /></td>
-                        </tr>
-                       
+                        {/* Verificar se a lista está vindo vazia */}
+                        {props.lista && props.lista.length > 0 ? (
+                            //Vamos mapear os item da lista
+                            props.lista.map((item) => (
+
+                                <tr className="item_lista" key={item.idGenero}>
+                                    <td data-cell="Nome">
+                                        {item.nome}
+                                    </td>
+                                    <td data-cell="Genero" style={{ display: props.visiGenero }}>Ação</td>
+                                    <td data-cell="Editar" ><img src={Editar} alt="Caneta" /></td>
+                                    <button onClick={() => (props.funcDeletar(item))}>
+
+                                    <td data-cell="Excluir"><img src={Excluir} alt="Lixo" /></td>
+
+                                    </button>
+
+                                </tr>
+                            ))
+                        ) :
+                            (
+                                <p>Nenhum gênero foi encontrado</p>
+                            )
+
+                        }
+
                     </tbody>
                 </table>
             </div>

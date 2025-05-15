@@ -4,7 +4,7 @@
 	const apiPorta = "5063";
 
 	// apiLocal recebe o endereço da API
-	const apiLocal = `http://localhost:${apiPorta}/api`;
+	const apiLocal = `http://localhost:${apiPorta}/api/`;
 
 	// Criação da instância do Axios com baseURL
 	const api = axios.create({ 
