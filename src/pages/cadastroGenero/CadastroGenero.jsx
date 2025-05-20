@@ -94,7 +94,6 @@ const CadastroGenero = () => {
                         icon: "success"
                     });
 
-                    
                     setGenero()
                     listarGenero();
 
@@ -122,6 +121,36 @@ const CadastroGenero = () => {
         // alertar("info", "ID não encontrado 🔍")
         //try => tentar (O esperado)
         //catch => lança a exceção
+    }
+
+    async function editarGenero(idGenero) {
+        const { value: novoGenero } = await Swal.fire({
+            title: "Modifique seu gênero",
+            input: "text",
+            inputLabel: "Novo gênero",
+            inputValue: idGenero.nome,
+            showCancelButton: true,
+            inputValidator: (value) => {
+                if (!value) {
+                    return "O campo não pode estar vazio!";
+                }
+            }
+
+        });
+        if (novoGenero) {
+            try {
+                await api.put(`genero/${idGenero.idGenero}`,
+                    { nome: novoGenero })
+                Swal.fire(`O gênero modificado é ${novoGenero}`);
+
+                setGenero()
+                listarGenero();
+
+            } catch (error) {
+                console.log(error);
+
+            }
+        }
     }
 
     //síncrono => Acontece simultâneamente
@@ -174,6 +203,7 @@ const CadastroGenero = () => {
                     tituloLista="Lista de Generos"
                     visiGenero="none"
                     funcDeletar={deletarGenero}
+                    funcEditar={editarGenero}
 
                     //atribuir para lista, o meu estado atual:
                     lista={listaGenero}

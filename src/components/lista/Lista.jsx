@@ -32,10 +32,26 @@ const Lista = (props) => {
                                         {item.nome}
                                     </td>
                                     <td data-cell="Genero" style={{ display: props.visiGenero }}>Ação</td>
-                                    <td data-cell="Editar" ><img src={Editar} alt="Caneta" /></td>
+                                    <td
+                                        onClick={() => { props.funcEditar(item) }}
+                                        data-cell="Editar"
+                                    >
+                                        <img src={Editar}
+                                            alt="Caneta"
+                                            style={{ cursor: "pointer" }}
+                                        />
+                                    </td>
 
-                                    <td onClick={() => (props.funcDeletar(item))} data-cell="Excluir"><img src={Excluir} alt="Lixo" style={{cursor: "pointer"}} /></td>
-                                
+                                    <td
+                                        onClick={() => (props.funcDeletar(item))}
+                                        data-cell="Excluir"
+                                    >
+                                        <img src={Excluir}
+                                            alt="Lixo"
+                                            style={{ cursor: "pointer" }}
+                                        />
+                                    </td>
+
 
                                 </tr>
                             ))
