@@ -16,7 +16,8 @@
 - **Biblioteca**: React.js  
 - **Estilização**: CSS puro  
 - **Editor**: Visual Studio Code  
-- **Gerenciamento de Rotas**: React Router DOM  
+- **Gerenciamento de Rotas**: React Router DOM
+- **API**: [Repositório da API no GitHub](https://github.com/Yasmin-Machado-da-Silva/API_filmesSENAI.git)
 
 ---
 
