@@ -33,11 +33,9 @@ const Lista = (props) => {
                                     </td>
                                     <td data-cell="Genero" style={{ display: props.visiGenero }}>Ação</td>
                                     <td data-cell="Editar" ><img src={Editar} alt="Caneta" /></td>
-                                    <button onClick={() => (props.funcDeletar(item))}>
 
-                                    <td data-cell="Excluir"><img src={Excluir} alt="Lixo" /></td>
-
-                                    </button>
+                                    <td onClick={() => (props.funcDeletar(item))} data-cell="Excluir"><img src={Excluir} alt="Lixo" style={{cursor: "pointer"}} /></td>
+                                
 
                                 </tr>
                             ))

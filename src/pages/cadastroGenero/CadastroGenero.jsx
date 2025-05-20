@@ -16,7 +16,7 @@ const CadastroGenero = () => {
     const [genero, setGenero] = useState("");
     const [listaGenero, setListaGenero] = useState([])
 
-    function alerta(icone, mensagem) {
+    function alertar(icone, mensagem) {
         const Toast = Swal.mixin({
             toast: true,
             position: "top-end",
@@ -34,6 +34,11 @@ const CadastroGenero = () => {
         });
     }
 
+
+    // useEffect(()=>{
+    //     alertar("sucess", "Lista modificada);")
+    // }, [])
+
     async function cadastrarGenero(evt) {
         evt.preventDefault();
         //Verificar se o input esta vindo vazio
@@ -42,14 +47,15 @@ const CadastroGenero = () => {
             try {
                 //cadastrar um genero: post
                 await api.post("genero", { nome: genero });
-                alerta("success", "Cadastro realizado com sucesso! 🎉")
+                alertar("success", "Cadastro realizado com sucesso! 🎉")
                 setGenero()
+                listarGenero()
             } catch (error) {
-                alerta("error", "ERRO: Entre em contato com o suporte! 🤖")
+                alertar("error", "ERRO: Entre em contato com o suporte! 🤖")
                 console.log(error);
             }
         } else {
-            alerta("info", "Não é possivel cadastrar, campo não preenchido! 📋")
+            alertar("info", "Não é possivel cadastrar, campo não preenchido! 📋")
 
         }
 
@@ -59,19 +65,61 @@ const CadastroGenero = () => {
 
 
     async function deletarGenero(generoId) {
+
+        //COMEÇO DO ALERTA
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: "btn btn-success",
+                cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: true
+        });
+        swalWithBootstrapButtons.fire({
+            title: "Você tem certeza?",
+            text: "Não será possivel reverter!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Sim",
+            cancelButtonText: "Não",
+            reverseButtons: true
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                try {
+                    //deletar um genero: delete
+                    await api.delete(`genero/${generoId.idGenero}`);
+                    alertar("success", "Gênero deletado com sucesso! 💣")
+                    swalWithBootstrapButtons.fire({
+                        title: "Deletado!",
+                        text: "O gênero foi deletado.",
+                        icon: "success"
+                    });
+
+                    
+                    setGenero()
+                    listarGenero();
+
+                } catch (error) {
+                    alertar("error", "ERRO: Entre em contato com o suporte! 🤖")
+                    console.log(error);
+                }
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                swalWithBootstrapButtons.fire({
+                    title: "Cancelado",
+                    text: "O gênero não foi deletado",
+                    icon: "error"
+                });
+            }
+        });
+        //FIM DO ALERTA
+
         //Verificar se o input esta vindo vazio
         // alert("O campo prescisa estar preenchido")
-        try {
-            //deletar um genero: delete
-            await api.delete(`genero/${generoId.idGenero}`);
-            alerta("success", "Gênero deletado com sucesso! 💣")
-            setGenero()
-        } catch (error) {
-            alerta("error", "ERRO: Entre em contato com o suporte! 🤖")
-            console.log(error);
-        }
 
-        // alerta("info", "ID não encontrado 🔍")
+
+        // alertar("info", "ID não encontrado 🔍")
         //try => tentar (O esperado)
         //catch => lança a exceção
     }
